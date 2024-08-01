@@ -1,0 +1,27 @@
+{
+  "frontend/entrypoints/main.css": {
+    "file": "main-CV2d8b0g.css",
+    "src": "frontend/entrypoints/main.css",
+    "isEntry": true
+  },
+  "frontend/entrypoints/main.js": {
+    "file": "main-BYUb71ll.js",
+    "name": "main",
+    "src": "frontend/entrypoints/main.js",
+    "isEntry": true,
+    "imports": [
+      "frontend/entrypoints/promo-banner.js"
+    ]
+  },
+  "frontend/entrypoints/promo-banner.css": {
+    "file": "promo-banner-BrRhIXyr.css",
+    "src": "frontend/entrypoints/promo-banner.css",
+    "isEntry": true
+  },
+  "frontend/entrypoints/promo-banner.js": {
+    "file": "promo-banner-h6AIV486.js",
+    "name": "promo-banner",
+    "src": "frontend/entrypoints/promo-banner.js",
+    "isEntry": true
+  }
+}

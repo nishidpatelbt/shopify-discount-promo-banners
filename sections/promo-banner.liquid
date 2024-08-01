@@ -1,0 +1,54 @@
+{% assign total_blocks = section.blocks | size %}
+{% for block in section.blocks %}
+  {% unless block.settings.discount_code == blank %}
+    <div class="promo-banner tw-hidden tw-font-scribbles {% if forloop.index == total_blocks %} most-recent-block{% endif %}" style="--banner-bg-color: {{ block.settings.background_color }}; --banner-text-color: {{ block.settings.text_color }};" data-discount-code="{{ block.settings.discount_code }}" data-utm-medium="{{ block.settings.utm_medium }}">
+      <div class="tw-flex tw-justify-between tw-items-center tw-my-0 tw-mx-auto tw-p-14to24 tw-shadow-2xl">
+        <span class="message tw-text-14to20 tw-mr-4">{{ block.settings.message }}</span>
+        <button class="close-btn bg-transparent border-none tw-text-14to20 cursor-pointer">Close</button>
+      </div>
+    </div>
+  {% endunless %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Promo Banners",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Promo Banner",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "message",
+          "label": "Banner Message",
+          "default": "Your 15% off discount code WELCOME15 will auto-apply at checkout."
+        },
+        {
+          "type": "text",
+          "id": "utm_medium",
+          "label": "UTM Medium"
+        },
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount Code"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ff0000"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

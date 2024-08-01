@@ -1,0 +1,16 @@
+@import './promo-banner.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Setup third-party font in font face for promo banner text */
+@layer base {
+  @font-face {
+      font-family: "Scribbles AF W00 Chunky";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://db.onlinewebfonts.com/t/4cc932176e4006184f97c81f412889ce.woff2) format('woff2');
+  }
+}

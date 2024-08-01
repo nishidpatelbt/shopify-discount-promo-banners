@@ -1,0 +1,5 @@
+/* ASSIGNED VARIABLES TO SET BACKGROUND AND TEXT COLOR */
+.promo-banner {
+    background-color: var(--banner-bg-color);
+    color: var(--banner-text-color);
+}
